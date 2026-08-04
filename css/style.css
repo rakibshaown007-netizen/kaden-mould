@@ -1,0 +1,41 @@
+html, body, #app {
+  height: 100%;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.4);
+  border-radius: 999px;
+}
+
+/* Simple fade/slide for modals */
+.kmt-modal-backdrop {
+  animation: kmt-fade 0.15s ease-out;
+}
+.kmt-modal-panel {
+  animation: kmt-slide-up 0.18s ease-out;
+}
+@keyframes kmt-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes kmt-slide-up {
+  from { transform: translateY(24px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Toast */
+.kmt-toast {
+  animation: kmt-toast-in 0.2s ease-out;
+}
+@keyframes kmt-toast-in {
+  from { transform: translate(-50%, -12px); opacity: 0; }
+  to { transform: translate(-50%, 0); opacity: 1; }
+}
